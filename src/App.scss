@@ -1,43 +1,110 @@
-html, input, button {
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
-  color: #FFF;
-  font-size: 16px;
-}
+@import 'styles/vars.scss';
 
-body {
-  --bg-color: #D86351;
-  /* background-color: #D86351; */
-  background-color: var(--bg-color);
+html,
+input,
+button {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: $root-color;
+  font-size: $root-font + px;
 }
 
 a {
-  color: #FFF;
+  color: $root-color;
   text-decoration: none;
+
+  &:focus {
+    outline: none;
+    text-decoration: underline;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
-a:focus {
-  outline: none;
-  text-decoration: underline;
+.app-container {
+  $grey: #43464B;
+  $green: #19AA8D;
+  $blue: #029ED7;
+  $purple: #3D2C62;
+
+  background-color: $bg-color;
+  min-width: 300px;
+
+  //themes 
+  &--grey {
+    background-color: $grey;
+
+    .button:not(.button--facebook) {
+      color: $grey;
+    }
+
+    .divider {
+      &-or {
+        background-color: $grey;
+      }
+    }
+  }
+
+  &--green {
+    background-color: $green;
+
+    .button:not(.button--facebook) {
+      color: $green;
+    }
+
+    .divider {
+      &-or {
+        background-color: $green;
+      }
+    }
+  }
+
+  &--blue {
+    background-color: $blue;
+
+    .button:not(.button--facebook) {
+      color: $blue;
+    }
+
+    .divider {
+      &-or {
+        background-color: $blue;
+      }
+    }
+  }
+
+  &--purple {
+    background-color: $purple;
+
+    .button:not(.button--facebook) {
+      color: $purple;
+    }
+
+    .divider {
+      &-or {
+        background-color: $purple;
+      }
+    }
+  }
 }
 
-a:hover {
-  text-decoration: underline;
+.text {
+  &-smaller {
+    font-size: to-rem(14);
+  }
+
+  &-bigger {
+    font-size: to-rem(20);
+  }
+
+  &-right {
+    text-align: right;
+  }
 }
 
-.text-smaller {
-  font-size: .875rem;
-}
-
-.text-bigger {
-  font-size: 1.25rem;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.to-right {
+.float-right {
   float: right;
 }
 
@@ -64,10 +131,8 @@ a:hover {
 .flex-column {
   display: flex;
   flex-direction: column;
-}
 
-@media only screen and (min-width: 769px) {
-  .flex-column {
+  @media only screen and (min-width: $break-large) {
     height: inherit;
     justify-content: center;
   }
@@ -80,24 +145,22 @@ a:hover {
 }
 
 .login-row {
-  height: 500px;
+  height: to-rem(500);
 }
 
 .block {
-  max-width: 300px;
+  max-width: to-rem(300);
   width: 100%;
 }
 
 .login {
   border: 1px solid rgba(255, 255, 255, .4);
   border-radius: 3px;
-  padding: 15px 15px;
-  max-width: 380px;
-}
+  padding: to-rem(15);
+  max-width: to-rem(380);
 
-@media only screen and (min-width: 400px) {
-  .login {
-    padding: 50px 35px;
+  @media only screen and (min-width: $break-small) {
+    padding: to-rem(50) to-rem(35);
   }
 }
 
@@ -106,67 +169,14 @@ a:hover {
 }
 
 .welcome-banner {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 300;
-  font-size: 2.5rem;
+  font-size: to-rem(40);
   text-align: center;
-  margin: 1rem 0 0;
-}
+  margin: to-rem(16) 0 0;
 
-@media only screen and (min-width: 769px) {
-  .welcome-banner {
-    font-size: 3.5rem;
+  @media only screen and (min-width: $break-large) {
+    font-size: to-rem(56);
     text-align: left;
   }
-}
-
-.form-fields {
-  border: none;
-  padding: 0;
-  margin: 0;
-}
-
-.form-fields .login-input:nth-child(n+2) {
-  /* border-top: 0; */
-  top: -1px;
-}
-
-.form-fields .login-input::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, .4);
-}
-
-.form-field {
-  position: relative;
-}
-
-.form-field:not(:last-child) {
-  margin-bottom: 18px;
-}
-
-.form-field--spaced:not(:last-child) {
-  margin-bottom: 24px;
-}
-
-.form-field--tight:not(:last-child) {
-  margin-bottom: 6px;
-}
-
-.divider {
-  position: relative;
-  border-top: 1px solid rgba(255, 255, 255, .4);
-  text-align: center;
-  top: .7rem;
-}
-
-.divider-or {
-  display: inline-block;
-  position: relative;
-  width: 50px;
-  top: -.7rem;
-  background-color: var(--bg-color);
-}
-
-.val-mesage {
-  display: inline-block;
-  margin-top: 10px;
 }

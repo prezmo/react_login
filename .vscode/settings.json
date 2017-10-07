@@ -1,5 +1,5 @@
 {
-  "editor.fontSize": 13,
+  "editor.fontSize": 14,
   "eslint.enable": true,
   "beautify.language": {
     "js": {
@@ -28,5 +28,6 @@
   "css.validate": true,
   "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
   "javascript.format.insertSpaceAfterConstructor": false,
-  "files.insertFinalNewline": true
+  "files.insertFinalNewline": true,
+  "html.format.wrapAttributes": "force"
 }

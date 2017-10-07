@@ -1,0 +1,55 @@
+@import 'styles/vars.scss';
+
+.input-container {
+  position: relative;
+
+  &--invalid {
+    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+    transform: translateX(0);
+
+    & > .input {
+      border-color: $invalid-border-color;
+
+      &:focus {
+        border-color: $invalid-border-color;
+      }
+    }
+  }
+}
+
+.input {
+  position: relative;
+  background: none;
+  color: white;
+  border: 1px solid $border-color;
+  border-radius: 3px;
+  padding: to-rem(12) to-rem(12) to-rem(12) to-rem(30);
+  width: 100%;
+  transition: border .2s linear;
+  font-family: 'Lato';
+  font-size: to-rem(16);
+  line-height: 1.2;
+  font-weight: 300;
+
+  &:focus {
+    border-color: $border-color-focused;
+    outline: none;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: to-rem(10);
+    transform: translateY(-50%);
+    color: $border-color-focused;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $border-color;
+  }
+
+  &:-ms-input-placeholder,
+  &:-moz-placeholder {
+    color: $border-color;
+  }
+}

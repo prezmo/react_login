@@ -1,0 +1,56 @@
+@import 'styles/vars.scss';
+
+$facebook-blue: #3B5998;
+
+.button {
+  position: relative;
+  display: block;
+  background-color: #FFF;
+  border: none;
+  border-radius: 3px;
+  width: 100%;
+  padding: to-rem(12);
+  margin: 0 auto;
+  font-size: to-rem(16);
+  font-weight: 800;
+  color: $bg-color;
+  cursor: pointer;
+  transition: transform .1s linear;
+  will-change: transform;
+
+  &:hover {
+    background-color: #EEE;
+  }
+
+  &:focus {
+    background-color: #EEE;
+    outline: none;
+  }
+
+  &:active {
+    transform: scale(.98);
+  }
+
+  &--facebook {
+    color: $facebook-blue;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: to-rem(15);
+    transform: translateY(-50%);
+  }
+
+  &--small {
+    display: inline-block;
+    margin: to-rem(5);
+    width: auto;
+    padding: to-rem(8);
+    font-size: to-rem(12);
+  }
+
+  .fa-spin {
+    animation: fa-spin 1s infinite linear;
+  }
+}

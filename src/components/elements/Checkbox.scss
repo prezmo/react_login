@@ -1,0 +1,57 @@
+@import 'styles/vars.scss';
+
+.checkbox {
+  &:not(:checked),
+  &:checked {
+    position: absolute;
+    left: -9999px;
+  }
+
+  + label {
+    position: relative;
+    cursor: pointer;
+    padding-left: to-rem(22);
+  }
+
+  & + label::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: to-rem(16);
+    height: to-rem(16);
+    border: 1px solid $border-color;
+    border-radius: 15%;
+    transition: border-color .2s;
+  }
+
+  &:focus + label::before,
+  &:active + label::before {
+    border-color: $border-color-focused;
+  }
+
+  & + label::after {
+    font-family: 'FontAwesome';
+    font-size: to-rem(10);
+    line-height: 1;
+    content: '\f00c';
+    position: absolute;
+    top: 50%;
+    transform: translateY(to-rem(-5));
+    left: to-rem(3);
+    margin-right: to-rem(10);
+    transition: all .2s;
+    will-change: transform, opacity;
+  }
+
+  &:not(:checked) + label::after {
+    opacity: 0;
+    transform: translateY(to-rem(-5)) scale(0);
+  }
+
+  &:checked + label::after {
+    opacity: 1;
+    transform: translateY(to-rem(-5)) scale(1);
+  }
+}

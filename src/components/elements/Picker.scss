@@ -1,0 +1,79 @@
+@import 'styles/vars.scss';
+
+.picker {
+  $picker-btn-size: 45;
+  $picker-btn-half: to-rem($picker-btn-size / 2);
+  $height: 125;
+  $mobile-height: 165;
+  $mobile-break: 555px;
+  $offset: 0;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: to-rem($mobile-height);
+  padding: to-rem(25) to-rem(15);
+  background-color: grey;
+  text-align: center;
+  box-shadow: 0 0 23px 4px rgba(0,0,0,0.5);
+  transition: transform .3s ease-out;
+  z-index: 1;
+  will-change: transform;
+
+  @media only screen and (min-width: $mobile-break) {
+    height: to-rem($height);
+  }
+
+  
+  &--hidden {
+    transform: translateY(-#{to-rem($mobile-height - $offset)});
+
+    @media only screen and (min-width: $mobile-break) {
+      transform: translateY(-#{to-rem($height - $offset)});
+    }
+    
+    .picker__button {
+      transform: rotate(180deg);
+      box-shadow: 0 -6px 20px 0 rgba(0, 0, 0, 0.5);
+    }
+  }
+  
+  h3 {
+    // display: inline-block;
+    margin: 0 0 to-rem(10) 0;
+  }
+  
+  &__button {
+    position: absolute;
+    text-align: center;
+    border-radius: 50%;
+    border: none;
+    background-color: #FFF;
+    width: to-rem($picker-btn-size);
+    height: to-rem($picker-btn-size);
+    bottom: to-rem(-$picker-btn-size / 2);
+    left: calc(50% - #{$picker-btn-half});
+    cursor: pointer;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+    will-change: transform;
+
+    &:hover {
+      background-color: #EEE;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &::before {
+      font-family: 'FontAwesome';
+      font-size: to-rem(20);
+      position: relative;
+      color: grey;
+      content: '\f077';
+      line-height: to-rem($picker-btn-size);
+      top: -#{to-rem(3)}
+    }
+  }
+}

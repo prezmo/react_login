@@ -1,0 +1,17 @@
+@import 'styles/vars.scss';
+
+.form-field {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: to-rem(22);
+  }
+
+  &--spaced:not(:last-child) {
+    margin-bottom: to-rem(24);
+  }
+
+  &--tight:not(:last-child) {
+    margin-bottom: to-rem(6);
+  }
+}

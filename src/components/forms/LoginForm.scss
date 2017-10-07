@@ -1,0 +1,16 @@
+@import 'styles/vars.scss';
+
+.divider {
+  position: relative;
+  border-top: 1px solid $border-color;
+  text-align: center;
+  top: to-rem(11.2);
+
+  &-or {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    top: to-rem(-11.2);
+    background-color: $bg-color;
+  }
+}

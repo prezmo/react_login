@@ -1,0 +1,36 @@
+// root font
+$root-font: 16;
+$root-color: #FFF;
+
+@function to-rem($targetValue) {
+  @return ($targetValue / $root-font) + rem;
+}
+
+// colors
+$bg-color: #D86351;
+$border-color: rgba(255, 255, 255, .4);
+$border-color-focused: rgba(255, 255, 255, .8);
+$invalid-border-color: rgb(212, 42, 23);
+
+// responsive steps 
+$break-large: 769px;
+$break-small: 400px;
+
+// animations
+@keyframes shake {
+  10%, 90% {
+    transform: translateX(-1px);
+  }
+  
+  20%, 80% {
+    transform: translateX(2px);
+  }
+
+  30%, 50%, 70% {
+    transform: translateX(-4px);
+  }
+
+  40%, 60% {
+    transform: translateX(4px);
+  }
+}
