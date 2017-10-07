@@ -1,0 +1,32 @@
+{
+  "editor.fontSize": 13,
+  "eslint.enable": true,
+  "beautify.language": {
+    "js": {
+      "type": [
+        "json"
+      ],
+      "filename": [
+        ".jshintrc",
+        ".jsbeautify"
+      ]
+    },
+    "css": [
+      "css",
+      "scss",
+      "less"
+    ],
+    "html": [
+      "htm",
+      "html",
+      "xml",
+      "vue"
+    ]
+  },
+  "javascript.validate.enable": false,
+  "typescript.validate.enable": true,
+  "css.validate": true,
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
+  "javascript.format.insertSpaceAfterConstructor": false,
+  "files.insertFinalNewline": true
+}

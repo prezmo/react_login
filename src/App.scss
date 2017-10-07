@@ -1,0 +1,172 @@
+html, input, button {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  color: #FFF;
+  font-size: 16px;
+}
+
+body {
+  --bg-color: #D86351;
+  /* background-color: #D86351; */
+  background-color: var(--bg-color);
+}
+
+a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.text-smaller {
+  font-size: .875rem;
+}
+
+.text-bigger {
+  font-size: 1.25rem;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.to-right {
+  float: right;
+}
+
+.centered {
+  margin: 0 auto;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.v-centered {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 769px) {
+  .flex-column {
+    height: inherit;
+    justify-content: center;
+  }
+}
+
+.container {
+  max-width: 1000px;
+  /* min-width: 400px; */
+  height: 100vh;
+}
+
+.login-row {
+  height: 500px;
+}
+
+.block {
+  max-width: 300px;
+  width: 100%;
+}
+
+.login {
+  border: 1px solid rgba(255, 255, 255, .4);
+  border-radius: 3px;
+  padding: 15px 15px;
+  max-width: 380px;
+}
+
+@media only screen and (min-width: 400px) {
+  .login {
+    padding: 50px 35px;
+  }
+}
+
+.login-header {
+  margin-top: 0;
+}
+
+.welcome-banner {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 1rem 0 0;
+}
+
+@media only screen and (min-width: 769px) {
+  .welcome-banner {
+    font-size: 3.5rem;
+    text-align: left;
+  }
+}
+
+.form-fields {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form-fields .login-input:nth-child(n+2) {
+  /* border-top: 0; */
+  top: -1px;
+}
+
+.form-fields .login-input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, .4);
+}
+
+.form-field {
+  position: relative;
+}
+
+.form-field:not(:last-child) {
+  margin-bottom: 18px;
+}
+
+.form-field--spaced:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.form-field--tight:not(:last-child) {
+  margin-bottom: 6px;
+}
+
+.divider {
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, .4);
+  text-align: center;
+  top: .7rem;
+}
+
+.divider-or {
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  top: -.7rem;
+  background-color: var(--bg-color);
+}
+
+.val-mesage {
+  display: inline-block;
+  margin-top: 10px;
+}

@@ -1,0 +1,65 @@
+/* alternative button colors
+background-color: #FFF;
+  color: #D86351;
+  opacity: .8; only for hover
+  border: 2px solid #FF7560;
+*/
+
+.button {
+  position: relative;
+  display: block;
+  background-color: #FFF;
+  /* background-color: transparent; */
+  border: none;
+  border-radius: 3px;
+  width: 100%;
+  padding: 12px;
+  margin: 0 auto;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--bg-color);
+  /* color: #FFF; */
+  cursor: pointer;
+  transition: transform .1s linear;
+  will-change: transform;
+}
+
+.button:hover {
+  /* background-color: #FFF; */
+  /* color: #D86351; */
+  /* background-color: #FFF; */
+  /* border: 1px solid #984639; */
+  background-color: #EEE;
+}
+
+.button:focus {
+  /* border: 2px solid rgba(255, 255, 255, 0.8); */
+  /* border: 2px solid #FF7560; */
+  /* border: 2px solid #DEA096; */
+  /* color: #D86351; */
+  /* border: 2px solid #FFF; */
+  /* opacity: .95; */
+  background-color: #EEE;
+  /* border: 1px solid #984639; */
+  outline: none;
+}
+
+.button:active {
+  /* transform: translateY(2px); */
+  transform: scale(.98);
+}
+
+.button--facebook {
+  /* border: 1px solid #4267B2; */
+  /* background-color: #FFF; */
+  color: #3B5998;
+}
+
+.button-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  /* font-size: 1.375rem; */
+  /* color: #3B5998; */
+  transform: translateY(-50%);
+}
