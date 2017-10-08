@@ -1,3 +1,6 @@
+## React Login page POC
+[Sample is available here](https://prezmo.github.io/react_login/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
