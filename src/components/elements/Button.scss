@@ -52,5 +52,6 @@ $facebook-blue: #3B5998;
 
   .fa-spin {
     animation: fa-spin 1s infinite linear;
+    transform-origin: 50% calc(50% - .5px);
   }
 }

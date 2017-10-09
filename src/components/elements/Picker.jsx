@@ -34,7 +34,7 @@ class Picker extends Component {
       <aside className={`picker ${this.state.hidden ? 'picker--hidden' : ''}`}>
         <h3>Choose your flavour:</h3>
         {flavours}
-        <button onClick={this.switchHide} className="picker__button" name="color and size picker"></button>
+        <button onClick={this.switchHide} className="picker__button" name="show" aria-hidden="true"></button>
       </aside>
     )
   }
