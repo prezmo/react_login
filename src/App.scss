@@ -141,8 +141,12 @@ a {
 
 .container {
   max-width: 1000px;
-  height: to-rem(500);
+  height: to-rem(600);
   min-height: 100vh;
+
+  @media only screen and (min-width: $break-large) {
+    height: to-rem(500);
+  }
 }
 
 .login-row {
