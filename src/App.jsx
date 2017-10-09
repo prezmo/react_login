@@ -3,6 +3,7 @@ import Button from './components/elements/Button';
 import Picker from './components/elements/Picker';
 import LoginForm from './components/forms/LoginForm';
 import '../node_modules/normalize.css/normalize.css';
+// font-awsome should be optimized in real app - only glyphs & classes needed
 import '../node_modules/font-awesome/css/font-awesome.css';
 import './styles/grid.scss';
 import './App.scss';

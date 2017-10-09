@@ -20,7 +20,7 @@
     "wrap_attributes": "force",
     "wrap_attributes_indent_size": 4,
     "unformatted": ["a", "meta", "script", "link", "span", "img", "code", "pre", "sub", "sup", "em", "strong", "b", "i", "u", "strike", "big", "small", "pre", "h1", "h2", "h3", "h4", "h5", "h6"], // List of tags that should not be reformatted
-    "content_unformatted": ["head", "pre"],
+    "content_unformatted": ["pre"],
     "extra_liners": ["head", "body", "/html"]
   },
 

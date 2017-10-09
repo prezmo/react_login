@@ -17,6 +17,15 @@
   }
 }
 
+.hidden_label {
+  position:absolute; 
+  left:-10000px; 
+  top:auto; 
+  width:1px; 
+  height:1px; 
+  overflow:hidden;
+}
+
 .input {
   position: relative;
   background: none;

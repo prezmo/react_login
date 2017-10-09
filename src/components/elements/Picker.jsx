@@ -23,6 +23,7 @@ class Picker extends Component {
   render() {
     const flavours = this.props.buttonsList.map((item) =>
       <Button
+        name={item.name}
         key={item.name}
         className="button--small"
         clickHandler={() => this.props.clickHandler(item)}>{item.name}
@@ -33,7 +34,7 @@ class Picker extends Component {
       <aside className={`picker ${this.state.hidden ? 'picker--hidden' : ''}`}>
         <h3>Choose your flavour:</h3>
         {flavours}
-        <button onClick={this.switchHide} className="picker__button"></button>
+        <button onClick={this.switchHide} className="picker__button" name="color and size picker"></button>
       </aside>
     )
   }

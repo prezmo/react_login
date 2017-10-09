@@ -11,7 +11,9 @@ function Input(props) {
   return (
     <div className={`input-container ${validationClass}`}>
       {iconEle}
+      <label className="hidden_label" htmlFor={props.id}>{props.name}</label>
       <input
+        id={props.id}
         className="input"
         tabIndex={props.tabIndex}
         type={props.type}
@@ -25,6 +27,7 @@ function Input(props) {
 }
 
 Input.propTypes = {
+  id: PropTypes.string,
   tabIndex: PropTypes.string,
   name: PropTypes.string,
   type: PropTypes.string,

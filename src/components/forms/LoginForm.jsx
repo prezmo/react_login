@@ -142,6 +142,7 @@ class LoginForm extends Component {
       <FormContainer>
         <FormField>
           <Input
+            id="email"
             name="email"
             type="email"
             tabIndex="1"
@@ -156,6 +157,7 @@ class LoginForm extends Component {
 
         <FormField>
           <Input
+            id="password"
             name="password"
             type="password"
             tabIndex="2"
