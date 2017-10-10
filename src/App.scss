@@ -164,11 +164,11 @@ a {
 .login {
   border: 1px solid rgba(255, 255, 255, .4);
   border-radius: 3px;
-  padding: to-rem(15);
+  padding: 15px;
   max-width: to-rem(380);
 
   @media only screen and (min-width: $break-small) {
-    padding: to-rem(50) to-rem(35);
+    padding: 50px 35px;
   }
 }
 
