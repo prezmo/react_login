@@ -1,16 +1,42 @@
 @import 'styles/vars.scss';
 
 .divider {
-  position: relative;
-  border-top: 1px solid $border-color;
+  display: inline-block;
   text-align: center;
-  top: to-rem(11.2);
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 
-  &-or {
+  &__text {
+    display: inline-block;
+    margin: 0 to-rem(15);
+  }
+
+  &::before, &::after {
+    display: inline-block;
+    content: '';
+    width: 41%;
+    height: 1px;
+    vertical-align: middle;
+  }
+
+  &::before {
+    background: linear-gradient(to left,$border-color 0%, $border-color 40%, transparent 100%);
+  }
+
+  &::after {
+    background: linear-gradient(to right,$border-color 0%, $border-color 40%, transparent 100%);
+  }
+
+
+
+
+
+  /* &-or {
     display: inline-block;
     position: relative;
     width: 50px;
     top: to-rem(-11.2);
     background-color: $bg-color;
-  }
+  } */
 }

@@ -195,9 +195,7 @@ class LoginForm extends Component {
         </FormField>
 
         <FormField className="form-field--spaced">
-          <div className="divider">
-            <span className="divider-or">or</span>
-          </div>
+          <span className="divider"><span className="divider__text">or</span></span>
         </FormField>
 
         <FormField>
